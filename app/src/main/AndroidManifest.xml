@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mfa.smartphonebook">
+
+    <permission android:name="com.example.mfa.smartphonebook.provider.READWRITE"/>
+    <uses-permission android:name="com.example.mfa.smartphonebook.provider.READWRITE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.WithActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.WithActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AddActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/add_contact_title" />
+
+        <activity android:name=".EditActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/edit_contact_title" />
+
+        <activity android:name=".InformationContact"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/info_contact_title" />
+
+
+        <activity android:name=".SearchActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/search_contact_title" />
+
+        <activity android:name=".CallLogs"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/call_history" />
+
+        <activity android:name=".SmsLogs"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/sms_history" />
+
+        <provider
+            android:name="com.example.mfa.smartphonebook.PhoneProvider"
+            android:authorities="com.example.mfa.smartphonebook.provider"
+            android:exported="true"
+            android:readPermission="com.example.mfa.smartphonebook.provider.READWRITE"
+            android:writePermission="com.example.mfa.smartphonebook.provider.READWRITE"/>
+    </application>
+
+</manifest>

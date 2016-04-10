@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SMART PHONEBOOK</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_search_title"><![CDATA[main_search_title</> </menu>]]></string>
+    <string name="main_add_title">oh hi</string>
+    <string name="main_deleteDatabase_title" />
+    <string name="search_title">SEARCH</string>
+    <string name="add_contact_title">ADD CONTACT</string>
+    <string name="edit_contact_title">EDIT</string>
+    <string name="search_contact_title">SEARCH</string>
+    <string name="info_contact_title">INFO</string>
+    <string name="sms_history">SMS HISTORY</string>
+    <string name="call_history">CALL HISTORY</string>
+</resources>
